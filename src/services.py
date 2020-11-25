@@ -1,6 +1,7 @@
 import random
-from maze.constants import DO_NOT_INCLUDE, INCLUDE_SOLUTION_STEPS
 from copy import deepcopy
+
+from src.constants import DO_NOT_INCLUDE, INCLUDE_SOLUTION_STEPS
 
 
 class MazeGenerator:
@@ -34,6 +35,9 @@ class MazeGenerator:
         # Solution
         self.solution_included = solution_type != DO_NOT_INCLUDE
         self.solution_steps_included = solution_type == INCLUDE_SOLUTION_STEPS
+
+        # Run maze generation
+        self.generate_maze()
 
     def generate_maze(
         self,

@@ -8,9 +8,7 @@ black = "*"
 isort = "*"
 
 [packages]
-django = "*"
-django-rest-framework = "*"
-psycopg2 = "*"
+flask = "*"
 python-dotenv = "*"
 
 [pipenv]
