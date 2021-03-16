@@ -3,6 +3,7 @@ version: "3"
 services:
   backend:
     build: .
+    container_name: maze_api
     ports:
       - "${PORT}:5000"
     volumes:
@@ -12,7 +13,6 @@ services:
       VIRTUAL_HOST: ${SSL_DOMAIN}
       VIRTUAL_PORT: ${PORT}
       LETSENCRYPT_HOST: ${SSL_DOMAIN}
-      LETSENCRYPT_EMAIL: ${LETSENCRYPT_EMAIL}
       PYTHONUNBUFFERED: ${PYTHONUNBUFFERED}
       PYTHONIOENCODING: ${PYTHONIOENCODING}
     networks:
