@@ -21,4 +21,4 @@ services:
 networks:
   proxy:
     external:
-      name: ${NGINX_PROXY_NETWORK}
+      name: ${HTTPS_NETWORK}
