@@ -3,6 +3,7 @@ version: "3"
 services:
   backend:
     build: .
+    restart: always
     container_name: maze_api
     ports:
       - "${PORT}:5000"
