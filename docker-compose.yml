@@ -11,9 +11,6 @@ services:
       - "./:/usr/src/app"
       - "${DOCKER_STATIC_HOSTING}:/usr/src/app/static"
     environment:
-      VIRTUAL_HOST: ${SSL_DOMAIN}
-      VIRTUAL_PORT: ${PORT}
-      LETSENCRYPT_HOST: ${SSL_DOMAIN}
       PYTHONUNBUFFERED: ${PYTHONUNBUFFERED}
       PYTHONIOENCODING: ${PYTHONIOENCODING}
     networks:
