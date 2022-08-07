@@ -1,8 +1,9 @@
-version: "3"
+version: "3.8"
 
 services:
   backend:
     build: .
+    image: maze_api
     restart: always
     container_name: maze_api
     ports:
@@ -18,5 +19,5 @@ services:
 
 networks:
   https:
-    external:
-      name: ${HTTPS_NETWORK}
+    name: ${HTTPS_NETWORK}
+    external: true
